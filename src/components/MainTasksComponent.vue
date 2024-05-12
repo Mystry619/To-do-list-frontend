@@ -29,7 +29,7 @@ export default {
   methods: {
     async createTask(task) {
       try {
-        const response = await fetch(`http://localhost:8080/create/${this.$route.params.email}`, {
+        const response = await fetch(`https://20240512t142928-dot-to-do-list-backend-423109.ey.r.appspot.com/create/${this.$route.params.email}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ export default {
     },
     async getAllTasks() {
       try {
-        const response = await fetch(`http://localhost:8080/tasks/${this.$route.params.email}`);
+        const response = await fetch(`https://20240512t142928-dot-to-do-list-backend-423109.ey.r.appspot.com/tasks/${this.$route.params.email}`);
         const data = await response.json();
         this.tasks = data;
       } catch (error) {
@@ -59,7 +59,7 @@ export default {
     },
     async deleteTask(taskId) {
       try {
-        const response = await fetch(`http://localhost:8080/tasks/${this.$route.params.email}/${taskId}`, {
+        const response = await fetch(`https://20240512t142928-dot-to-do-list-backend-423109.ey.r.appspot.com/tasks/${this.$route.params.email}/${taskId}`, {
           method: 'DELETE'
         });
         if (response.ok) {

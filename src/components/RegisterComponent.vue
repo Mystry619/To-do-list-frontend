@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     registerUser() {
-      fetch('http://localhost:8080/register', {
+      fetch('https://20240512t142928-dot-to-do-list-backend-423109.ey.r.appspot.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
