@@ -27,7 +27,7 @@
     methods: {
       async getCompletedTasks() {
         try {
-          const response = await fetch(`https://20240512t142928-dot-to-do-list-backend-423109.ey.r.appspot.com/tasks/${this.$route.params.email}/completed`);
+          const response = await fetch(`https://backedn-to-do.ey.r.appspot.com/tasks/${this.$route.params.email}/completed`);
           const data = await response.json();
           this.completedTasks = data;
         } catch (error) {
